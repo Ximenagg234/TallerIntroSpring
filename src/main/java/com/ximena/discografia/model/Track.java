@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Track {
 
-    private Long id;
+    private int id;
     private String title;
     private String genre;
     private double duration;
@@ -16,7 +16,7 @@ public class Track {
         this.artists = new ArrayList<>();
     }
 
-    public Track(Long id, String title, String genre,
+    public Track(int id, String title, String genre,
                  double duration, String albumTitle) {
         this.id = id;
         this.title = title;
@@ -26,7 +26,7 @@ public class Track {
         this.artists = new ArrayList<>();
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -50,7 +50,7 @@ public class Track {
         return artists;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
