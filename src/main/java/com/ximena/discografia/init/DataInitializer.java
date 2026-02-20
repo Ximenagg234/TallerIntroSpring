@@ -12,20 +12,103 @@ public class DataInitializer {
     public DataInitializer(ArtistRepository artistRepository,
                            TrackRepository trackRepository) {
 
-        for (int i = 1; i <= 10; i++) {
-            Artist artist = new Artist((int) i,
-                    "Artist " + i,
-                    "Colombia");
+        String[] names = {
+                "Shakira",
+                "Karol G",
+                "Maluma",
+                "J Balvin",
+                "Feid",
+                "Taylor Swift",
+                "Bad Bunny",
+                "Dua Lipa",
+                "Drake",
+                "Adele"
+        };
 
+        String[] nationalities = {
+                "Colombia",
+                "Colombia",
+                "Colombia",
+                "Colombia",
+                "Colombia",
+                "USA",
+                "Puerto Rico",
+                "UK",
+                "Canada",
+                "UK"
+        };
+
+        for (int i = 0; i < names.length; i++) {
+            Artist artist = new Artist(i + 1, names[i], nationalities[i]);
             artistRepository.save(artist);
         }
 
-        for (int i = 1; i <= 50; i++) {
-            Track track = new Track((int) i,
-                    "Track " + i,
+        String[] trackTitles = {
+                "Hips Don't Lie",
+                "Tusa",
+                "Hawái",
+                "Mi Gente",
+                "Classy 101",
+                "Blank Space",
+                "Tití Me Preguntó",
+                "Levitating",
+                "God's Plan",
+                "Rolling in the Deep",
+
+                "Whenever, Wherever",
+                "Provenza",
+                "Felices los 4",
+                "Ay Vamos",
+                "Normal",
+                "Love Story",
+                "Dakiti",
+                "Physical",
+                "One Dance",
+                "Hello",
+
+                "Waka Waka",
+                "Bichota",
+                "Sobrio",
+                "Safari",
+                "Ferxxo 100",
+                "Cardigan",
+                "Yonaguni",
+                "New Rules",
+                "Hotline Bling",
+                "Skyfall",
+
+                "She Wolf",
+                "Ocean",
+                "ADMV",
+                "Ritmo",
+                "Chorrito Pa Las Animas",
+                "Anti-Hero",
+                "Moscow Mule",
+                "Don't Start Now",
+                "In My Feelings",
+                "Someone Like You",
+
+                "La Tortura",
+                "El Makinon",
+                "Corazón",
+                "Ginza",
+                "Hey Mor",
+                "Shake It Off",
+                "Callaita",
+                "Dance The Night",
+                "Started From The Bottom",
+                "Easy On Me"
+        };
+
+        for (int i = 0; i < trackTitles.length; i++) {
+
+            Track track = new Track(
+                    i + 1,
+                    trackTitles[i],
                     "Pop",
                     3.5,
-                    "Album " + i);
+                    "Greatest Hits Vol." + ((i / 10) + 1)
+            );
 
             trackRepository.save(track);
         }

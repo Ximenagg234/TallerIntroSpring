@@ -21,6 +21,7 @@
         <th>Nombre</th>
         <th>Nacionalidad</th>
         <th># Canciones</th>
+        <th>Nombres de las canciones</th>
     </tr>
     </thead>
     <tbody>
@@ -38,6 +39,11 @@
         <td><%= artist.getName() %></td>
         <td><%= artist.getNationality() %></td>
         <td><%= artist.getTracks().size() %></td>
+        <td><%= artist.getTracks().stream()
+                .map(t -> t.getTitle())
+                .reduce((a, b) -> a + ", " + b)
+                .orElse("") %>
+        </td>
     </tr>
 
     <%
