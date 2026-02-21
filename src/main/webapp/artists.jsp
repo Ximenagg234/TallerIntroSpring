@@ -10,7 +10,9 @@
           rel="stylesheet">
 </head>
 
-<body class="container mt-4">
+<body>
+<%@ include file="navbar.jsp" %>
+<div class="container mt-4">
 
 <h2 class="mb-4">Lista de Artistas</h2>
 
@@ -22,6 +24,7 @@
         <th>Nacionalidad</th>
         <th># Canciones</th>
         <th>Nombres de las canciones</th>
+        <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -43,6 +46,12 @@
                 .map(t -> t.getTitle())
                 .reduce((a, b) -> a + ", " + b)
                 .orElse("") %>
+        </td>
+        <td>
+            <form action="deleteArtist" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="<%= artist.getId() %>">
+                <button type="submit" class="btn btn-danger btn-sm"> Eliminar </button>
+            </form>
         </td>
     </tr>
 

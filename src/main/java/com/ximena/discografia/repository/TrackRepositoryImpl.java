@@ -19,12 +19,12 @@ public class TrackRepositoryImpl implements TrackRepository {
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(int id) {
         tracks.removeIf(t -> t.getId()==(id));
     }
 
     @Override
-    public Track findById(Long id) {
+    public Track findById(int id) {
         return tracks.stream()
                 .filter(t -> t.getId()==(id))
                 .findFirst()

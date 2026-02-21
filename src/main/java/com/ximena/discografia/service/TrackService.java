@@ -7,5 +7,5 @@ public interface TrackService {
 
     List<Track> getAllTracks();
     void createTrack(Track track, List<Integer> artistIds);
-    void deleteTrack(Long id);
+    void deleteTrack(int id);
 }

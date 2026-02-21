@@ -9,7 +9,7 @@ public interface TrackRepository {
 
     void save(Track track);
 
-    void deleteById(Long id);
+    void deleteById(int id);
 
-    Track findById(Long id);
+    Track findById(int id);
 }
