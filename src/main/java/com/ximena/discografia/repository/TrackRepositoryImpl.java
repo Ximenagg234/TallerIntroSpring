@@ -1,9 +1,11 @@
 package com.ximena.discografia.repository;
 
 import com.ximena.discografia.model.Track;
+import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class TrackRepositoryImpl implements TrackRepository {
 
     private List<Track> tracks = new ArrayList<>();

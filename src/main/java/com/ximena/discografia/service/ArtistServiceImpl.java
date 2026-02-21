@@ -2,9 +2,11 @@ package com.ximena.discografia.service;
 
 import com.ximena.discografia.model.Artist;
 import com.ximena.discografia.repository.ArtistRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ArtistServiceImpl implements ArtistService {
 
     private ArtistRepository artistRepository;

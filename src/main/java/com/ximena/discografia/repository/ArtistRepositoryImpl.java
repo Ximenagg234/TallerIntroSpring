@@ -1,9 +1,11 @@
 package com.ximena.discografia.repository;
 
 import com.ximena.discografia.model.Artist;
+import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ArtistRepositoryImpl implements ArtistRepository {
 
     private List<Artist> artists = new ArrayList<>();

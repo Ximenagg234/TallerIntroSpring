@@ -4,9 +4,11 @@ import com.ximena.discografia.model.Artist;
 import com.ximena.discografia.model.Track;
 import com.ximena.discografia.repository.ArtistRepository;
 import com.ximena.discografia.repository.TrackRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TrackServiceImpl implements TrackService {
 
     private TrackRepository trackRepository;

@@ -4,9 +4,10 @@ import com.ximena.discografia.model.Artist;
 import com.ximena.discografia.model.Track;
 import com.ximena.discografia.repository.ArtistRepository;
 import com.ximena.discografia.repository.TrackRepository;
-
+import org.springframework.stereotype.Component;
 import java.util.List;
 
+@Component
 public class DataInitializer {
 
     public DataInitializer(ArtistRepository artistRepository,
